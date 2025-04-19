@@ -46,6 +46,8 @@ def get_filename_from_url(url: str, extension: str):
 
 
 def get_lora_from_url(url: str):
+    if os.path.exists(url):
+        return url
     # clean the url
     url = url.strip()
 
